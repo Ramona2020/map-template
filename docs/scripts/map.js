@@ -201,9 +201,9 @@ function processLayer(result) {
 // ACTION ITEM: If you would like to incorporate multiple views into your mapping application, remove the double slashes in front of each trio of lines beginning with else if and ending with the end curly brace.	
 // ACTION ITEM: Each trio of lines from else if to the end curly brace is equivalent to one Cloudant view and map.
 // ACTION ITEM: Remember to replace your selection label with your view from Cloudant and the mapbox key with the corresponding map.
-	// else if (selection_label == "1920") {
-	//	new_id = 'vulibrarygis.l366jopj'
-	// } 
+	else if (selection_label == "1920") {
+		new_id = 'ramona2020.1icf9k4e'
+	 } 
 	// else if (selection_label == "1936") {
 	//	new_id = 'vulibrarygis.l369lc2l'
 	// } 
