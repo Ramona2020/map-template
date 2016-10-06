@@ -90,7 +90,7 @@ $(function() {
 	// list views from Cloudant that we want to offer as layers
 	var cloudantViews = [];
 // ACTION ITEM: Replace cloudant database URL with URL for your database 
-	$.getJSON('https://vulibrarygis.cloudant.com/map-berlin/_design/tour/',
+	$.getJSON('https://ramonav.cloudant.com/mapping-boston/_design/tour/',
 		function(result) {
 			var viewsList = result.views;
 			for (var v in viewsList) {
@@ -126,7 +126,7 @@ $("#search").submit(function(event) {
 function getLayer(callback, cloudantView) {
 // ACTION ITEM: Replace cloudant database URL with URL for your database 	
 	var cloudantURLbase =
-		"https://vulibrarygis.cloudant.com/map-berlin/_design/tour/_view/";
+		"https://ramonav.cloudant.com/mapping-boston/_design/tour/_view/";
 	var cloudantURLcallback = "?callback=?";
 	var thisCloudantURL = cloudantURLbase + cloudantView + cloudantURLcallback;
 	$.getJSON(thisCloudantURL, function(result) {
@@ -143,7 +143,7 @@ function getLayer(callback, cloudantView) {
 function searchPoints(callback, cloudantSearch) {
 // ACTION ITEM: Replace cloudant database URL with URL for your database 	
 	var cloudantURLbase =
-		"https://vulibrarygis.cloudant.com/map-berlin/_design/tour/_search/ids?q=";
+		"https://ramonav.cloudant.com/mapping-boston/_design/tour/_search/ids?q=";
 	var cloudantURLcallback = "&callback=?";
 	var thisCloudantURL = cloudantURLbase + cloudantSearch + cloudantURLcallback;
 	$.getJSON(thisCloudantURL, function(result) {
@@ -167,7 +167,7 @@ function getPoints(cloudantIDs) {
 
 	function getPoint(id) {
 // ACTION ITEM: Replace cloudant database URL with URL for your database 		
-		var cloudantURLbase = "https://vulibrarygis.cloudant.com/map-berlin/";
+		var cloudantURLbase = "https://ramonav.cloudant.com/mapping-boston/";
 		var url = cloudantURLbase + id;
 		return $.getJSON(url); // this returns a "promise"
 	}
@@ -201,7 +201,7 @@ function processLayer(result) {
 // ACTION ITEM: If you would like to incorporate multiple views into your mapping application, remove the double slashes in front of each trio of lines beginning with else if and ending with the end curly brace.	
 // ACTION ITEM: Each trio of lines from else if to the end curly brace is equivalent to one Cloudant view and map.
 // ACTION ITEM: Remember to replace your selection label with your view from Cloudant and the mapbox key with the corresponding map.
-	else if (selection_label == "1920") {
+	else if (selection_label == "Somerville") {
 		new_id = 'ramona2020.1icf9k4e'
 	 } 
 	// else if (selection_label == "1936") {
